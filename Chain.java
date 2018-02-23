@@ -19,7 +19,7 @@ public class Chain implements PlugInFilter{
 		int M = ip.getWidth();
 		int N = ip.getHeight();
 		originX=0;//sets starting point to 0,0
-        originY=0;
+        	originY=0;
 		for (int u=0; u < M; u++){
 			for (int v=0; v < N; v++){
 				int p = ip.getPixel(u,v);
@@ -49,7 +49,7 @@ public class Chain implements PlugInFilter{
 			if(curx==originX && cury==originY) break;//break out of the loop when back at the starting point
 		}while(i<M*N);//so it won't go endlessly
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		nextPixel(nextx,nexty,ip);//finds the final pixel
+		nextPixel(nextx,nexty,ip);//finds the final link in the chain code
 		
 		IJ.log(chaincode);//prints the final chain code
 		IJ.log("differential is: "+differential);//prints the final differential
